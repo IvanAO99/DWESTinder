@@ -16,14 +16,23 @@
     /*$router->get('/users',function(){
         echo "Me han pedido un listado de usuarios";
     });*/
+    //rutas de la parte visual
+    $router->get('/',function (){
+        include_once "vistas/home.php";
+    });
+    $router->get('/terminos',function (){
+        require_once "vistas/terminos.php";
+    });
 
-    $router->get('usuarios',[UsuarioControlador::class,'getTodosLosUsuarios']);
-    $router->get('usuario',[UsuarioControlador::class,'getUsuario']);
-    $router->put('usuario',[UsuarioControlador::class,'modificarUsuario']);
-    $router->post('usuario',[UsuarioControlador::class,'guardarUsuario']);
-    $router->delete('usuario',[UsuarioControlador::class,'borrarUsuario']);
-    $router->get('api/usuarios',[UsuarioControlador::class,'mostrarUsuariosAPI']);
-    $router->delete('api/usuario',[UsuarioControlador::class,'borrarUsuarioAPI']);
+
+    $router->get('/usuarios',[UsuarioControlador::class,'getTodosLosUsuarios']);
+    $router->get('/usuario',[UsuarioControlador::class,'getUsuario']);
+    $router->put('/usuario',[UsuarioControlador::class,'modificarUsuario']);
+    $router->post('/usuario',[UsuarioControlador::class,'guardarUsuario']);
+    $router->delete('/usuario',[UsuarioControlador::class,'borrarUsuario']);
+    $router->get('/api/usuarios',[UsuarioControlador::class,'mostrarUsuariosAPI']);
+    $router->delete('/api/usuario',[UsuarioControlador::class,'borrarUsuarioAPI']);
+    $router->post('/api/usuario',[UsuarioControlador::class,'guardarUsuarioAPI']);
 
 
 

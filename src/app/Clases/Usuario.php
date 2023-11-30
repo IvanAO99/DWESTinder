@@ -5,20 +5,9 @@ namespace App\Clases;
 class Usuario
 {
     private string $email;
-    private array $fotos;
     private string $nombre;
     private string $apellidos;
-    //private Enum $sexo;
-    private string $orientacion;
-    private string $residencia;
-    private string $geolocalizacion;
-    //private Date $fecha_nac;
     private array $perfil;
-    private array $likes;
-    private string $descripcion;
-    private array $matches;
-    private array $personasOK;
-    private array $personasNoOK;
 
     public function __construct()
     {
